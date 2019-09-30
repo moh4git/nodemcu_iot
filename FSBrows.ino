@@ -37,8 +37,8 @@
 #define APSSID "MySmartHome"
 #define APPSK  "12345678"
 // Station Config
-#define STASSID "idoomAdsl"
-#define STAPSK  "035353336201828"
+#define STASSID "MyAccessPoint"
+#define STAPSK  "12345678"
 #endif
 
 const char* apssid = APSSID;
