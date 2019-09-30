@@ -1,0 +1,29 @@
+html {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block; 
+  margin: 0px auto; 
+  text-align: center;color: #333333;
+  background-image: radial-gradient(lighten(#263238, 20%), #263238);
+}
+
+h1 {margin: 50px auto 30px;}
+.side-by-side{display: inline-block;vertical-align: middle;position: relative;}
+.humidity-icon{background-color: #3498db;width: 30px;height: 30px;border-radius: 50%;line-height: 36px;}
+.humidity-text{font-weight: 600;padding-left: 15px;font-size: 19px;width: 160px;text-align: left;}
+.humidity{font-weight: 300;font-size: 50px;color: #3498db;}
+.temperature-icon{background-color: #f39c12;width: 30px;height: 30px;border-radius: 50%;line-height: 40px;}
+.temperature-text{font-weight: 600;padding-left: 15px;font-size: 19px;width: 160px;text-align: left;}
+.temperature{font-weight: 300;font-size: 50px;color: #f39c12;}
+.superscript{font-size: 17px;font-weight: 600;position: absolute;right: -20px;top: 15px;}
+.data{padding: 10px;}
+
+input[type=radio][name="menucolor"] {
+    display: none;
+}
+#btnOn .glyphicon-ok {
+    opacity: 0;
+}

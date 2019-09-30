@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="manifest" href="manifest.json">
+  <title>Maison Controle</title>
+  <link rel="stylesheet" href="/framework7-css.css">
+  <link rel="stylesheet" href="/icons.css">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Left Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Left panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main safe-areas">
+      <!-- Page, data-name contains page name which can be used in callbacks -->
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title sliding">Maison IoT</div>
+          </div>
+        </div>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <div class="block">
+            <div class="item-media"><img src="home_logo.png" width="110"/></div>
+            <br>
+            <div class="row">
+              <div class="col text-align-center">
+                <div
+                  class="gauge gauge-init humid-gauge"
+                  data-type="circle"
+                  data-value="0"
+                  data-value-text="0 %"
+                  data-value-text-color="#F5B819"
+                  data-label-text="Humidité"
+                  data-border-color="#F5B819"
+                  data-label-text-color="#fff"
+                  data-value-font-size="51"
+                  data-value-font-weight="700"
+                  data-border-width="20"
+                  data-border-bg-color="#0054FF"
+                  data-bg-color="#0054FF"
+                ></div>
+              </div>
+              <div class="col text-align-center">
+                <div
+                  class="gauge gauge-init temp-gauge"
+                  data-type="circle"
+                  data-value="0"
+                  data-value-text="0 °C"
+                  data-value-text-color="#e91e63"
+                  data-label-text="Temperature"
+                  data-label-text-color="#333"
+                  data-value-font-size="51"
+                  data-value-font-weight="700"
+                  data-border-width="20"
+                  data-border-color="#4caf50"
+                  data-border-bg-color="#ffeb3b"
+                  data-bg-color="#ffeb3b"
+                ></div>
+              </div>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Status <i class="icon f7-icons">bulb</i> chambre d'enfant</div>
+                      <div class="item-after"><span id="relay-one" class="badge color-red">&nbsp&nbspOff&nbsp&nbsp</span></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Status <i class="icon f7-icons">bulb</i> chambre des parents</div>
+                      <div class="item-after"><span id="relay-two" class="badge color-red">&nbsp&nbspOff&nbsp&nbsp</span></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="fab fab-center-bottom fab-extended">
+            <a class="ac-1" href="#">
+              <i class="icon f7-icons if-not-md">home</i>
+              <i class="icon material-icons md-only">home</i>
+              <div class="fab-text">Cliquez</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Framework7 library -->
+  <script src="/framework7-min.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="/app.js"></script>
+</body>
+</html>
